@@ -1,6 +1,4 @@
-# ama
-
-Ask me anything in 《狼叔爱Node》
+# Ask me anything in 《狼叔爱Node》
 
 # 2017-02-24
 
