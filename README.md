@@ -2,12 +2,6 @@
 
 Ask me anything in 《狼叔爱Node》
 
-如果想提问，请加入《狼叔爱Node》群，有问必答
-
-> 互相尊重，坦诚，不说没用的
-
-![Connect](connect.jpg)
-
 # 2017-02-24
 
 [回复内容](https://wx.xiaomiquan.com/mweb/views/topicdetail/topicdetail.html?topic_id=825114512512&secret=nz1g98h4s9mjd46jzu0tbx7blebu4enq&from=singlemessage)
@@ -48,3 +42,9 @@ Ask me anything in 《狼叔爱Node》
 ## 问题3
 
 狼叔，我想问下，业务订单超时未付款自动关闭，一般是如何实现的？
+
+## 如果想提问，请加入《狼叔爱Node》群，有问必答
+
+> 互相尊重，坦诚，不说没用的
+
+![Connect](connect.jpg)
