@@ -1,5 +1,16 @@
 # Ask me anything in 《狼叔爱Node》
 
+《狼叔爱Node》是我在小密圈上创建的私密沟通群
+
+- 主要内容涵盖Node、全栈、开源三大部分
+- 偶尔发点感想、备忘、笔记类的，会有不想公开的哦
+- 方便沟通，可以直接提问，应急支援，解答疑问、点评
+- 更有justjavac、fundon、老雷，nswbmw、alsotang等大神陪伴
+
+会员策略
+
+前100名99元/年，之后恢复正常价格199元/年
+
 # 2017-02-24
 
 [回复内容](https://wx.xiaomiquan.com/mweb/views/topicdetail/topicdetail.html?topic_id=825114512512&secret=nz1g98h4s9mjd46jzu0tbx7blebu4enq&from=singlemessage)
