@@ -61,6 +61,8 @@
 
 # 2017-03-06
 
+[详细回复](https://wx.xiaomiquan.com/mweb/views/topicdetail/topicdetail.html?topic_id=145425855182&secret=nz1g98h4s9mjd46jzu0tbx7blebu4enq)
+
 ## 问题1
 
 > 桑大 问个问题  如果后台用python或者java专门提供数据  node如何去调用
