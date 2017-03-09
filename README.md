@@ -80,6 +80,48 @@
 
 > 每次看github的代码都觉得一头雾水，不知怎么下手，请教各位大神们，你们是怎么阅读github里面代码的呢
 
+
+# 2017-03-09
+
+[统一回复](https://wx.xiaomiquan.com/mweb/views/topicdetail/topicdetail.html?topic_id=458558452158&secret=nz1g98h4s9mjd46jzu0tbx7blebu4enq)
+
+## 问题1
+
+> 如下代码实现了一个使用mocha来检测是否返回了一个用户的测试用例const request = require('supertest')describe('GET /user/:id', function() {    it('returns a user', function() {    return request(app)      .get('/user')      .set('Accept', 'application/json')      .expect(200, {        name: 'John Math'      }, done) })})
+
+上面写的测试用例，不知道意义何在。我觉得是，真正需要测试的大都是业务逻辑，比如游戏核心玩法算法这些，写个测试用例有很大的意义，可以验证算法是否正确。
+
+## 问题2
+
+> 请问狼叔，现在node项目的代码使用ES6标准写还是用以前的？
+
+## 问题3
+
+> 狼叔每天可否出几道思考题，这样能够指引大家慢慢覆盖node的知识点。之前的那一次就非常棒
+
+## 问题4
+
+> 狼叔，对于用node 写手游服务器端，你有什么看法？或者有没有接触过的人，用node 在写服务器端的？
+
+## 问题5
+
+> mongo不支持事务，狼叔有什么推荐的解决方案吗？
+
+## 问题6
+
+> 一直有个疑惑，可能没有太在意。 今天想问下狼叔。大家都在说node.js的事件驱动，异步IO，概念都能倒背入流了，却依然没有掌握到精髓所在。
+我的疑问在图片里，请狼叔解答。
+
+/**
+ * 疑问：
+ * 单机运行情况下
+ * 
+ * 1: 并发请求过来的时候， 比如说req1, req2 ,是否这两个请求的func3 是按什么顺序注册到事件队列中的？
+ * 2: 是否会因为并发，导致redis数据混乱？ 我觉得应该会，io异步导致
+ * 3: 所谓的单线程，是否就真的没有锁，同步的烦恼？
+ */
+
+
 ## 如果想提问，请加入《狼叔爱Node》群，有问必答
 
 > 互相尊重，坦诚，不说没用的
