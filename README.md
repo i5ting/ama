@@ -85,6 +85,7 @@
 
 [统一回复](https://wx.xiaomiquan.com/mweb/views/topicdetail/topicdetail.html?topic_id=458558452158&secret=nz1g98h4s9mjd46jzu0tbx7blebu4enq)
 
+
 ## 问题1
 
 > 如下代码实现了一个使用mocha来检测是否返回了一个用户的测试用例const request = require('supertest')describe('GET /user/:id', function() {    it('returns a user', function() {    return request(app)      .get('/user')      .set('Accept', 'application/json')      .expect(200, {        name: 'John Math'      }, done) })})
@@ -120,6 +121,146 @@
  * 2: 是否会因为并发，导致redis数据混乱？ 我觉得应该会，io异步导致
  * 3: 所谓的单线程，是否就真的没有锁，同步的烦恼？
  */
+
+
+# 2017-03-16
+
+[统一回复](https://wx.xiaomiquan.com/mweb/views/topicdetail/topicdetail.html?topic_id=228154214151&secret=nz1g98h4s9mjd46jzu0tbx7blebu4enq)
+
+## 问题0
+
+我基础知识不行，之前有js基础，然后看了一下node就开始写项目，边做项目边查资料，只是能把功能实现，理论知识欠缺，如果想补一下该看什么呢@i5ting 。求狼叔点拨一二
+
+## 问题1
+
+狼叔，您好!我想请问应届生找node.js实习工作难吗?没有经验简历应该怎么写?希望您能提供点思路给新人，谢谢!
+
+## 问题2
+
+这几天去面试了一些nodejs职位，被问得最多同时也是最基本的问题就是：你平时写node有没有什么经验心得。。狼叔请原谅我这个刚毕业没多久的node菜鸟，对于这一块确实没有累积到什么经验，所以想问一下，狼叔你们在开发nodejs项目的时候，最常遇到什么问题，如何去解决的，谢谢～
+
+## 问题3
+
+请教大家，在使用formidable模块的时候，我发现如果在当前上传表单中并没有上传文件，那么在执行到form.parse()的时候会默认保存一个大小为0字节的空文件，请教该怎么避免这个问题？
+
+## 问题4
+
+狼叔，今天遇到一个问题，关于NodeJS能开辟多少个子进程的问题。具体场景：利用子进程来处理socket.io请求，想提高cpu的利用率，不知道开多少个子进程比较合适，目前是按照os.cpus().length来开辟的，但是不知是否能够重复利用cpu。最好的方法是重现真是的生产环境，然后根据cpu的使用情况来确定开辟的子进程数，但是这不现实。请狼叔指点一下，谢谢。
+
+## 问题5
+
+前段时间在V2看到TB的吐（招）槽（聘）贴，后来狼叔也在CNode整理了一番，但后期看到TB的严大回复“我们希望能招募到更多的应届生或工作一两年的后端新人”，当然，另一层意思是，3年左右的“老油条”第一成本不划算，第二我们的业务新人就搞得定，所以就不需要了；这让我有些困惑，最近由于公司这边的动荡才让我有了观望的想法，公司拖欠半月左右工资，从16年下半年开始已经有3次了，个人属于那种比较老实的那种，踏实干活、关注技术走向，不太感冒管理层的勾心斗角，但是感觉基本工资都不能保障，没有安全感；总结下：本人14年毕业就在这家公司，先后负责及时聊天、推送、微信服务号开发，到现在为止由于某些原因，想听下狼叔，关于“深度要扎实，适当的加点管理，尝试帮你的领导多分担活”这部分的详解。相信对于后端Nodejs走了3年左右的人来说是一个共性问题了。
+Ps：本人专业是计科（嵌入式方向），但由于刚毕业发现走硬件道路没有软件机会多，所以就投身到软件开发的队伍中了，Linux系统玩的很溜，甚至做过linux系统的裁剪和移植，所以才选择走后端而非前端，16年一段时间曾经做过一些简单前端开发，也做过php重构，但还是喜欢Nodejs，个人理念是不同需求、场景需要不同技术、语言，各个语言都有其擅长的地方和不灵的地方，不排斥java和php，能够灵活切换思维如果有需要的话；
+
+## 问题6
+
+```
+0 var request = require("request");
+    1
+    2 var url = "http://localhost:3000/testRedisLock";
+    3
+    4 for(let i = 0 ; i < 10; i++){
+    5   requestServer(i);
+    6 }
+    7
+    8 function requestServer(index){
+    9   request.post({
+   10     url:  url,
+   11     form: {
+   12       index:  index,
+   13       time: Date.now()
+   14     }
+   15   }, function(err){
+   16   });
+   17 }
+
+
+function testRedisLock(req,res) {
+    //测试redis原子性的分布式锁
+    console.log('time-start: ', req.body.time);
+    var jackPotDiamond = 0;
+    var autoFillTimes = 0;
+    var fillDiamond = 10;
+
+    var log = {
+        index:  req.body.index,
+        time:   req.body.time,
+        step    :   0
+    };
+
+    async.waterfall([
+        function (cb) {
+            redisUtil.getRedisData(POT_KEY, function (err,data) {
+                if(!err && !!data){
+                    jackPotDiamond = parseInt(data);
+                }
+                cb(err);
+            });
+        },
+        function (cb) {
+            log.oldJackPotDiamond = jackPotDiamond;
+            jackPotDiamond += 10;
+            log.jackPotDiamond = jackPotDiamond;
+            redisUtil.setRedisData(POT_KEY, fillDiamond, function (err) {
+                if(!!err){
+                    log.step = 1;
+                }
+                cb(err);
+            });
+        },
+        function (cb) {
+            redisUtil.getRedisData(AUTO_FILL_TIMES, function (err,data) {
+                if(!err && !!data){
+                    autoFillTimes = parseInt(data);
+                }
+                cb(err);
+            });
+        },
+        function (cb) {
+            log.oldAutoFillTimes = autoFillTimes;
+            autoFillTimes += 1;
+            log.autoFillTimes = autoFillTimes;
+            redisUtil.setRedisData(AUTO_FILL_TIMES, autoFillTimes, function (err) {
+                if(!!err){
+                    log.step = 2;
+                }
+                cb(err);
+            });
+        },
+        function (cb) {
+            redisUtil.INCRBY(AUTO_FILL_DIAMOND, fillDiamond, function (err) {
+                if(!!err){
+                    log.step = 3;
+                }
+                cb(err);
+            });
+        }
+    ],function (err) {
+        if(!!err){
+            log.error = err;
+        }
+        console.log('autoFillJackPot： ', req.body.time,log);
+        return res.send({info : log});
+    });
+
+for 循环执行了100次， 然而结果确实
+autoFillJackPot：  1489131722216 { index: '93',
+ time: '1489131722216',
+ step: 0,
+ oldJackPotDiamond: 0,
+ jackPotDiamond: 10,
+ oldAutoFillTimes: 0,
+    autoFillTimes: 1 
+}
+除了index是递增的，redis拿到的数据以及更新的数据 都跟第一次执行结果一致。
+
+我的理解就是，当大量的并发请求到服务器的时候，redis是需要加锁的，否则，数据就会出现错误。
+虽然redis单个操作是具有原子性的也只是对一个操作具有原子性，不是对请求处理过程具有原子性。
+```
+
+## 问题7
+
+狼叔，为什么写测试用例的时候要一条一条的写，而不是 按照功能模块一块撸了。
 
 
 ## 如果想提问，请加入《狼叔爱Node》群，有问必答
