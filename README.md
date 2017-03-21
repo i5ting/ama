@@ -262,6 +262,100 @@ autoFillJackPot：  1489131722216 { index: '93',
 
 狼叔，为什么写测试用例的时候要一条一条的写，而不是 按照功能模块一块撸了。
 
+# 2017-03-21
+
+[回复内容](https://wx.xiaomiquan.com/mweb/views/topicdetail/topicdetail.html?topic_id=228148512581&secret=nz1g98h4s9mjd46jzu0tbx7blebu4enq)
+
+## 问题6
+
+狼叔 我有个可能不太成熟的心理 觉得现在前端圈有个很怪异的现象，大家都用github分享些自己的项目
+当去看了对方的项目后，发现其实功能很简单，但是项目里却用了很多的库
+每个库依赖的库又有好几个，想想也是浪费。
+
+有时候在cnodejs上看些内容真的很不自在，看到一个项目想去研究下，想看看别人的思路，结果核心部分一堆库的调用，很希望看到的是大家都有自己的想法，而不是每次都是推荐库，感觉大家都要被各种库剥夺自己了
+
+答
+
+学些都是先散的点，然后放到一起。比如练字，刚开始都是单个字，后面才是谋篇布局、章法类的。所以上来就写，肯定是特别难得。
+
+对于开源项目也是一样的，所以理解了上面的原理，其实你就可以非常简单的逆推了。先把package.json的里的每个模块都玩明白了。然后再玩拼起来的，就会比较容易一些。避免上来大而全，对新手不利。
+
+最小化是学习最好的方法。能够从复杂的项目里扒出有用的东西，更是本事。加油
+
+## 问题1
+
+请教一下  狼叔  node作为后台为app提供接口的过程中，出现内存泄漏的问题，如何处理？我理解的是如果是客户端会有浏览器进行处理了，那服务器端如何处理？
+
+
+## 问题2
+
+async/await和promise的问题
+
+1，现在是promiseA+规范，但我不清楚node.js原生promise是怎么实现的？是通过emit还是setTimeout，还是process.nextTick实现的？
+2，async/await的本质是generator吗？是generator的语法糖吗？如何理解async/await和promise的关系？
+3，第三方bluebird或Q包，他们实现promise的方式和原生promise是一样的吗？
+还望狼叔解疑一下，最近这块有点疑问。。。
+
+## 问题3
+
+请教狼叔怎么用vscode进行node调试，有两个问题：
+
+- 1、图片中的第二个断点一直走不进去，第一个断点可以，是我的方式不对还是说这是因为node异步的原因？
+- 2、用vscode调试怎么进行post调试，比如提交表单数据，也就是怎么能和网页操作挂钩，比如像ASP.NET那样？
+
+## 问题4
+
+狼叔，请问这种方式exports是什么意思，特别是这部分 (function (Base62) {}({}));
+
+```
+code:
+module.exports = (function (Base62) {
+    var DEFAULT_CHARACTER_SET = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    Base62.encode = function(integer){
+        if (integer === 0) {return '0';}
+        var s = '';
+        while (integer > 0) {
+            s = Base62.characterSet[integer % 62] + s;
+            integer = Math.floor(integer/62);
+        }
+        return s;
+    };
+
+    Base62.decode = function(base62String){
+        var val = 0, base62Chars = base62String.split("").reverse();
+        base62Chars.forEach(function(character, index){
+            val += Base62.characterSet.indexOf(character) * Math.pow(62, index);
+        });
+        return val;
+    };
+
+    Base62.setCharacterSet = function(chars) {
+        var arrayOfChars = chars.split(""), uniqueCharacters = [];
+
+        if(arrayOfChars.length != 62) throw Error("You must supply 62 characters");
+
+        arrayOfChars.forEach(function(char){
+            if(!~uniqueCharacters.indexOf(char)) uniqueCharacters.push(char);
+        });
+
+        if(uniqueCharacters.length != 62) throw Error("You must use unique characters.");
+
+        Base62.characterSet = arrayOfChars;
+    };
+
+    Base62.setCharacterSet(DEFAULT_CHARACTER_SET);
+    return Base62;
+}({}));
+```
+
+## 问题5
+
+狼叔，更了不起的Node4这本快点大概什么时候能出呀，好想买一波。。。。
+
+答
+
+月底会公测，大家参与吧
 
 ## 如果想提问，请加入《狼叔爱Node》群，有问必答
 
