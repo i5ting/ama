@@ -1,6 +1,6 @@
 # 《Node全栈》
 
-## 开篇文案：做Node全栈，你合格么？
+## 做Node全栈，你合格么？
 
 自测一下
 
@@ -41,7 +41,7 @@
 - 测试
   - bdd/tdd
     - qunit
-    - mocha/jest/ava/tap
+    - mocha/jest/ava/tap/jasmine + karma
     - cucumber
   - spies, stubs and mocks
   - faker/sinon
@@ -115,7 +115,7 @@ github
 - md和编译
 - tocmd做法
 
-## VSCode
+## VSCode与Node调试
 
 - vscode用法和快捷键
 - 对比各种编辑器
@@ -362,7 +362,7 @@ mongoose
 - node做运维
   - shipit
   - gulp
-  - npm #!
+  - npm #! /bin/bash
 - gulp-ftp
 - 静态化：写-》压缩-》cdn-》一键发布
 - 爬虫
@@ -370,7 +370,7 @@ mongoose
 - 通过http和rpc等解耦
   - kafka提供http，美图的弹幕
   - rabbitmq
-  - node-redis-ajava
+  - node-redis-java
   
 ## addon开发和应对cpu密集任务
 
