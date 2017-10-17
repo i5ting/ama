@@ -4,40 +4,50 @@
 
 自测一下
 
-- 基础
-  - css 2 && 3
-  - js && es6
-  - http/ajax/rest
-  - git/svn/issues/pr
-  - markdown
-- 前端框架
-  - 模块化加载seajs\requirejs\commonjs
-  - mvc/mvvm
-  - Bootstrap
-  - jQuery/Extjs/Dojo/Mootools/Yui
-  - Backbone
-  - Angular
-- 移动端
-  - h5/localstorage/websocket/canvas
-  - phonegap/cordova
-  - 是否具备编写原生插件能力
-  - 优化：fastclick，zepto，iscroll等
-  - 框架：sencha、jqmobile、ionicframework等
-- 高效工具
-  - coffee/typescript
-  - sass/less/stylus
-  - postcss/uncss
-  - yeoman/slush
-  - npm/bower/component
-  - gulp/grunt/webpack
-  - browserfy
-  - hexo/jekyll
-- 最新技术
-  - react 全家桶
-  - vue2 全家桶
-  - angular 2/ionic 2
-  - react-native/weex
-  - electron/nw.js
+- 大前端相关
+  - 基础
+    - css 2 && 3
+    - js && es6
+    - http/ajax/rest
+    - git/svn/issues/pr
+    - markdown
+  - 前端框架
+    - 模块化加载seajs\requirejs\commonjs
+    - mvc/mvvm
+    - Bootstrap
+    - jQuery/Extjs/Dojo/Mootools/Yui
+    - Backbone
+    - Angular
+  - 移动端
+    - h5/localstorage/websocket/canvas
+    - phonegap/cordova
+    - 是否具备编写原生插件能力
+    - 优化：fastclick，zepto，iscroll等
+    - 框架：sencha、jqmobile、ionicframework等
+  - 最新技术
+    - react 全家桶
+    - vue2 全家桶
+    - angular 2/ionic 2
+    - react-native/weex
+    - electron/nw.js
+- 个人成长与技能
+  - 通过开源项目学习
+  - Git和GitHub
+  - VSCode与Node调试
+  - 个人成长
+  - 有观点的八卦
+  - 数据结构与设计模式
+- node
+  - Node是什么
+  - Node新手入门
+  - 异步流程控制
+  - 如何编写和发布npm模块
+  - 10分钟写脚手架
+  - cli工具举例
+  - 变态npm
+  - Stream
+  - Node考证
+  - 跨平台
 - 测试
   - bdd/tdd
     - qunit
@@ -47,17 +57,53 @@
   - faker/sinon
   - chai/should
   - jenkins/travis
-- 工具类
-  - 编辑器
-  - 调试工具
-  - 调优工具
+- 工程化
+  - precommit
+  - 环境变量与开发部署
+  - Node Web框架
+  - 自己动手写一个web框架
+  - 阿里云部署node
+  - Node部署
+  - 日志采集问题
+  - 前端三大框架
+  - webpack
+  - 学习预编译
+  - Typescrpt
+  - tpl和vue的异同
+  - Livereload
+  - 代理：多环境下提高开发效率
+  - Bigpipe
+  - 优化移动端加载速度
+- 你可以做的更多
+  - 页面即服务
+  - 使用node编写微服务
+  - Node源码阅读与调试
+  - 运维
+  - 内存与性能
+  - redis科普
+  - mongodb和mongoose
+  - addon开发和应对cpu密集任务
+- 高效工具
+  - coffee/typescript
+  - sass/less/stylus
+  - postcss/uncss
+  - yeoman/slush
+  - npm/bower/component
+  - gulp/grunt/webpack
+  - browserfy
+  - hexo/jekyll
+  - 工具类
+    - 编辑器
+    - 调试工具
+    - 调优工具
+- 案例讨论：如何设计一个高并发的活动系统
 - 其他
   - linux/shell
   - 语言node、java、.net、php、python、perl等
   - rdbms/nosql
   - 读过哪些经典的前端相关书？
   - 如何参与开源项目
-  
+
 你合格么？
 
 ## Node是什么
