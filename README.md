@@ -37,7 +37,7 @@
   - 个人成长
   - 有观点的八卦
   - 数据结构与设计模式
-- node
+- Node
   - Node是什么
   - Node新手入门
   - 异步流程控制
@@ -48,6 +48,7 @@
   - Stream
   - Node考证
   - 跨平台
+  - Node Web框架
 - 测试
   - bdd/tdd
     - qunit
@@ -60,7 +61,6 @@
 - 工程化
   - precommit
   - 环境变量与开发部署
-  - Node Web框架
   - 自己动手写一个web框架
   - 阿里云部署node
   - Node部署
