@@ -83,6 +83,7 @@
   - redis科普
   - mongodb和mongoose
   - addon开发和应对cpu密集任务
+  - Api模拟与管理
 - 高效工具
   - coffee/typescript
   - sass/less/stylus
@@ -539,6 +540,12 @@ mongoose
 - 移动端：cordova和ionic
 - web
 
+## Api模拟与管理
+
+- api规范
+- api模拟
+- api管理
+- api网关
 
 ## 如果想提问，请加入《狼叔爱Node》群，有问必答
 
